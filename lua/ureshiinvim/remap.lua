@@ -1,7 +1,7 @@
 -- set leader key
 vim.g.mapleader = " "
 
--- remap vim's "Ex" explorer cmd in normal mode
+-- remap vim's "Ex" Netrw explorer cmd in normal mode
 vim.keymap.set("n", "<leader>ee", vim.cmd.Ex)
 
 -- remapping for Visual Block mode
@@ -20,8 +20,8 @@ vim.keymap.set("n", "J", "mzJ`z")
 --  ctrl-d and ctrl-u are for half-page jumping down/up respectively,
 --  but these next cmds make it so that the cursor stays in the middle of the
 --  page when you do these jumps
-vim.keymap.set("n", "<leader>d", "<C-d>zz")
-vim.keymap.set("n", "<leader>u", "<C-u>zz")
+vim.keymap.set("n", "<leader>l", "<C-d>zz")
+vim.keymap.set("n", "<leader>h", "<C-u>zz")
 
 -- these will keep the cursor in the middle of the page when jumping btw
 -- search terms
@@ -48,6 +48,9 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- I actually can't tell what this does
 -- vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+
+-- this is for select entire file
+vim.keymap.set("n", "<leader>a", "ggVG+yzz")
 
 -- This is going to get me cancelled said Prime
 vim.keymap.set("i", "<C-c>", "<Esc>")

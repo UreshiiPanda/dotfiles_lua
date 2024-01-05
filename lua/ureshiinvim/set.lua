@@ -46,10 +46,8 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
 
-
-
-
-
+-- get rid of nvim auto-comments
+vim.cmd([[autocmd FileType * set formatoptions-=ro]])
 
 
 
