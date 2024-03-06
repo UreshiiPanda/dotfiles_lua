@@ -82,9 +82,9 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader>gl", "<cmd>CellularAutomaton game_of_life<CR>");
 
--- this is for :so which is "source curr file"
+-- this is for :so %  which is "source curr NeoVim config file"
 vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
+    vim.cmd("luafile $MYVIMRC")
 end)
 
 -- these next 2 are for trouble plugin
