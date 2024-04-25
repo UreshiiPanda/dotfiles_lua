@@ -9,7 +9,7 @@ vim.keymap.set("n", "<leader>zz", function()
     vim.wo.wrap = false
     vim.wo.number = true
     vim.wo.rnu = true
-    colorme("nord")
+    cme("nord")
 end)
 
 
@@ -25,5 +25,5 @@ vim.keymap.set("n", "<leader>zs", function()
     vim.wo.number = false
     vim.wo.rnu = false
     vim.opt.colorcolumn = "0"
-    colorme("gotham")
+    cme("gotham")
 end)
