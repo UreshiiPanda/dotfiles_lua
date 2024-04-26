@@ -14,6 +14,7 @@ return require('packer').startup(function(use)
       	-- or                            , branch = '0.1.x',
     	requires = { {'nvim-lua/plenary.nvim'} }
   }
+  -- use 'nvim-lua/plenary.nvim'
 
   -- Colorscheme:  Everforest
   use({
@@ -61,34 +62,62 @@ return require('packer').startup(function(use)
   use ('tpope/vim-fugitive')
 
   -- lsp-zero
-  use {
-      'VonHeikemen/lsp-zero.nvim',
-      branch = 'v3.x',
-      requires = {
-        --- Uncomment these if you want to manage LSP servers from neovim
-        {'williamboman/mason.nvim'},
-        {'williamboman/mason-lspconfig.nvim'},
+--  use {
+--      'VonHeikemen/lsp-zero.nvim',
+--      branch = 'v3.x',
+--      requires = {
+--        --- Uncomment these if you want to manage LSP servers from neovim
+--        {'williamboman/mason.nvim'},
+--        {'williamboman/mason-lspconfig.nvim'},
+--
+--        -- LSP Support
+--        {'neovim/nvim-lspconfig'},
+--
+--        -- Autocompletion
+--        {'hrsh7th/nvim-cmp'},
+--        {'hrsh7th/cmp-nvim-lsp'},
+--        {'L3MON4D3/LuaSnip'},
+--      }
+--  }
 
-        -- LSP Support
-        {'neovim/nvim-lspconfig'},
-
-        -- Autocompletion
-        {'hrsh7th/nvim-cmp'},
-        {'hrsh7th/cmp-nvim-lsp'},
-        {'L3MON4D3/LuaSnip'},
-      }
+  -- LSP
+  use {'neovim/nvim-lspconfig',
+    requires = {
+        {"williamboman/mason.nvim"},
+        {"williamboman/mason-lspconfig.nvim"},
+        {"hrsh7th/cmp-nvim-lsp"},
+        {"hrsh7th/cmp-buffer"},
+        {"hrsh7th/cmp-path"},
+        {"hrsh7th/cmp-cmdline"},
+        {"hrsh7th/nvim-cmp"},
+        {"L3MON4D3/LuaSnip"},
+        {"saadparwaiz1/cmp_luasnip"},
+        {"j-hui/fidget.nvim"},
+    }
   }
+ -- use "williamboman/mason.nvim"
+ -- use "williamboman/mason-lspconfig.nvim"
+ -- use "hrsh7th/cmp-nvim-lsp"
+ -- use "hrsh7th/cmp-buffer"
+ -- use "hrsh7th/cmp-path"
+ -- use "hrsh7th/cmp-cmdline"
+ -- use "hrsh7th/nvim-cmp"
+ -- use "L3MON4D3/LuaSnip"
+ -- use "saadparwaiz1/cmp_luasnip"
+ -- use "j-hui/fidget.nvim"
+
+
 
   -- for useless animations
   use('eandrju/cellular-automaton.nvim')
 
 
   -- trouble for diagnostics
-  use ('nvim-tree/nvim-web-devicons')
+  -- use ('nvim-tree/nvim-web-devicons')
 
   use {
        "folke/trouble.nvim",
-       dependencies = { "nvim-tree/nvim-web-devicons" },
+       requires = { { "nvim-tree/nvim-web-devicons" } },
        opts = {
         -- your configuration comes here
         -- or leave it empty to use the default settings

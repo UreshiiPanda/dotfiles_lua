@@ -4,6 +4,9 @@ vim.g.mapleader = " "
 -- remap redo key to "r"
 vim.keymap.set("n", "r", vim.cmd.redo, {noremap = true})
 
+-- remap tag return Ctrl-t for "go back from definition"
+vim.keymap.set("n", "gb", "<C-t>")
+
 -- remap vim's "Ex" Netrw explorer cmd in normal mode
 vim.keymap.set("n", "<leader>ee", vim.cmd.Ex)
 
