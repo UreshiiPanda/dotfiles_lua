@@ -42,9 +42,9 @@ vim.opt.isfname:append("@-@")
 
 -- fast update times
 vim.opt.updatetime = 50
- 
-vim.opt.colorcolumn = "80"
 
+-- set color strip in col 80
+-- vim.opt.colorcolumn = "80"
 
 -- get rid of nvim auto-comments
 vim.cmd([[autocmd FileType * set formatoptions-=ro]])

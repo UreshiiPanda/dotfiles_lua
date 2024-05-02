@@ -1,8 +1,23 @@
 -- set leader key
 vim.g.mapleader = " "
 
+--remap horizontal buffer split
+vim.keymap.set("n", "<leader>hs", "<cmd>split<CR>")
+
+-- remap vertical buffer split
+vim.keymap.set("n", "<leader>vs", "<cmd>vsplit<CR>")
+
+-- remap jump-to-end-of-line
+vim.keymap.set({"n", "v"}, "<leader>nd", "$")
+
+--remap jump-to-start-of-line
+vim.keymap.set({"n","v"}, "<leader>st", "^")
+
 -- remap redo key to "r"
 vim.keymap.set("n", "r", vim.cmd.redo, {noremap = true})
+
+-- remap ctrl-w buffer switcher
+vim.keymap.set("n", "<leader>w", "<C-w>")
 
 -- remap tag return Ctrl-t for "go back from definition"
 vim.keymap.set("n", "gb", "<C-t>")
@@ -54,12 +69,6 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- I actually can't tell what this does
 -- vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
-
--- this is for select entire file
-vim.keymap.set("n", "<leader>a", "ggVG+yzz")
-
--- This is going to get me cancelled said Prime
-vim.keymap.set("i", "<C-c>", "<Esc>")
 
 -- don't allow Q to be pressed with "no press"
 vim.keymap.set("n", "Q", "<nop>")
