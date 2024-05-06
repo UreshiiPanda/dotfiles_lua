@@ -2,10 +2,10 @@
 vim.g.mapleader = " "
 
 --remap horizontal buffer split
-vim.keymap.set("n", "<leader>hs", "<cmd>split<CR>")
+vim.keymap.set("n", "<leader>bh", "<cmd>split<CR>")
 
 -- remap vertical buffer split
-vim.keymap.set("n", "<leader>vs", "<cmd>vsplit<CR>")
+vim.keymap.set("n", "<leader>bv", "<cmd>vsplit<CR>")
 
 -- remap jump-to-end-of-line
 vim.keymap.set({"n", "v"}, "<leader>nd", "$")
