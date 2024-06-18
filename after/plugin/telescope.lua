@@ -2,7 +2,7 @@ local builtin = require('telescope.builtin')
 
 -- search thru all files
 -- tell Telescope to not ignore hiddens, but then tell it to still ignore the .git dir
-vim.keymap.set('n', '<leader>f', function() builtin.find_files({no_ignore=true, hidden=true, file_ignore_patterns={".git/"}}) end, {})
+vim.keymap.set('n', '<leader>f', function() builtin.find_files({no_ignore=true, hidden=true, file_ignore_patterns={".git/", "node_modules/"}}) end, {})
 
 -- search thru only git files
 -- Fuzzy search through the output of git ls-files command, respects .gitignore
