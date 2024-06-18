@@ -12,7 +12,9 @@ return require('packer').startup(function(use)
   use {
     	'nvim-telescope/telescope.nvim', tag = '0.1.3',
       	-- or                            , branch = '0.1.x',
-    	requires = { {'nvim-lua/plenary.nvim'} }
+    	requires = { {'nvim-lua/plenary.nvim'} },
+        -- opts = {hidden=true}
+
   }
   -- use 'nvim-lua/plenary.nvim'
 
@@ -113,7 +115,7 @@ return require('packer').startup(function(use)
 
 
   -- trouble for diagnostics
-  -- use ('nvim-tree/nvim-web-devicons')
+  use ('nvim-tree/nvim-web-devicons')
 
   use {
        "folke/trouble.nvim",
